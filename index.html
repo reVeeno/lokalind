@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokalind - Menumbuhkan Industri Indonesia</title>
+    <link rel="shortcut icon" href="src/logo (1).png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    
+    <style>
+        /* Carousel animation */
+    </style>
+</head>
+
+<body class="md:px-12 px-4 pt-5 md:pt-10" style="font-family: Poppins;">
+
+    <!-- navbar -->
+    <nav class="sticky top-0 z-50 bg-white">
+        <div class="w-full mx-auto">
+            <div class="flex items-center w-full justify-between h-16">
+                <!-- Logo and Brand Name -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-8 w-8" src="src/logo (1).png" alt="Logo">
+                    <span class="ml-2 md:text-3xl text-xl font-bold" style="color: #2A324B;">Lokal<span
+                            style="color: #D39362;">ind</span>
+                    </span>
+                </div>
+                <div class="flex">
+                    <!-- Navigation Links (for larger screens) -->
+                    <div class="items-center flex md:space-x-6 space-x-3">
+                        <div class="hidden md:flex space-x-4 items-center">
+                            <a href="#"
+                                class="text-[#1E1E1E] font-semibold hover:text-[#767B91] transition duration-500 ease-in-out">Jelajahi</a>
+                            <a href="#"
+                                class="text-[#1E1E1E] font-semibold hover:text-[#767B91] transition duration-500 ease-in-out">Komunitas</a>
+                        </div>
+                        <a href="#" class="">
+                            <svg class="md:w-6 w-4 text-[#1E1E1E] hover:text-[#767B91]"
+                                xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37"
+                                fill="none">
+                                <path
+                                    d="M36.1388 33.0362L27.8691 24.7666C29.8602 22.1162 30.9349 18.89 30.9313 15.575C30.9313 7.10762 24.0424 0.21875 15.575 0.21875C7.10762 0.21875 0.21875 7.10762 0.21875 15.575C0.21875 24.0424 7.10762 30.9313 15.575 30.9313C18.89 30.9349 22.1162 29.8602 24.7666 27.8691L33.0362 36.1388C33.4548 36.513 34.0008 36.7127 34.5621 36.697C35.1233 36.6813 35.6573 36.4513 36.0543 36.0543C36.4513 35.6573 36.6813 35.1233 36.697 34.5621C36.7127 34.0008 36.513 33.4548 36.1388 33.0362ZM4.60625 15.575C4.60625 13.4056 5.24956 11.2849 6.45482 9.48109C7.66008 7.67729 9.37317 6.2714 11.3774 5.4412C13.3817 4.611 15.5872 4.39378 17.7149 4.81701C19.8426 5.24024 21.7971 6.28492 23.3311 7.81892C24.8651 9.35293 25.9098 11.3074 26.333 13.4351C26.7562 15.5628 26.539 17.7683 25.7088 19.7726C24.8786 21.7768 23.4727 23.4899 21.6689 24.6952C19.8651 25.9004 17.7444 26.5438 15.575 26.5438C12.667 26.5403 9.87906 25.3835 7.82278 23.3272C5.76649 21.2709 4.60974 18.483 4.60625 15.575Z"
+                                    fill="#1E1E1E" />
+                            </svg>
+                        </a>
+                        <!-- Tombol keempat -->
+                        <li class="relative flex items-center space-x-1" x-data="{ open: false }"
+                            @mouseenter="open = true" @mouseleave="open = false">
+                            <a class="flex gap-2 text-[#1E1E1E] font-semibold hover:text-[#767B91] md:border-[1px] border-[1px] border-[#1E1E1E] hover:border-[#767B91] p-2 rounded-lg transition duration-500 ease-in-out"
+                                href="#" :aria-expanded="open">
+                                <img class="md:w-6 w-4" src="src/language2.png" alt="">
+                                <p class="font-bold md:flex hidden">Indonesia</p>
+                            </a>
+                            <!-- 2nd level menu -->
+                            <ul class="z-20  origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl [&[x-cloak]]:hidden"
+                                x-show="open" x-transition:enter="transition ease-out duration-200 transform"
+                                x-transition:enter-start="opacity-0 -translate-y-2"
+                                x-transition:enter-end="opacity-100 translate-y-0"
+                                x-transition:leave="transition ease-out duration-200"
+                                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak
+                                @focusout="await $nextTick();!$el.contains($focus.focused()) && (open = false)">
+                                <li>
+                                    <a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+                                        <div
+                                            class="flex items-center justify-center bg-white  shadow-sm h-7 w-7 shrink-0 mr-3">
+                                            <img src="src/language1.png" alt="">
+                                        </div>
+                                        <span class="whitespace-nowrap">English</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+                                        <div
+                                            class="flex items-center justify-center bg-white  shadow-sm h-7 w-7 shrink-0 mr-3">
+                                            <img src="src/language2.png" alt="">
+                                        </div>
+                                        <span class="whitespace-nowrap">Indonesia</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <img class="md:w-10 w-6" src="src/profile (1).png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- Mobile menu button -->
+                    <div class="mr-2 flex md:hidden">
+                        <button id="mobile-menu-button"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-[#1E1E1E] font-semibold hover:text-[#767B91]">
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-50">
+                <a href="#" class="block text-[#1E1E1E] font-semibold hover:text-[#767B91]">Jelajahi</a>
+                <a href="#" class="block text-[#1E1E1E] font-semibold hover:text-[#767B91]">Komunitas</a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar -->
+    <!-- carousel -->
+    <div class="relative w-full flex items-center justify-center ">
+        <div class="carousel-container w-full h-full relative rounded-[30px] mt-10">
+            <!-- Carousel slides -->
+            <div class="carousel-slide w-[500%] h-[30rem]">
+                <div class="w-1/5 h-full bg-cover bg-center" style="background-image: url('src/banner1.png');">
+                    <div class="d-flex pl-16 w-full h-full flex flex-col justify-center"
+                        style="background: linear-gradient(to right, rgba(0, 0, 0, 0.584), rgba(0, 0, 0, 0.032));">
+                    </div>
+                </div>
+                <div class="w-1/5 h-full bg-cover bg-center" style="background-image: url('src/banner2.png');">
+                    <div class="d-flex pl-16 w-full h-full flex flex-col justify-center"
+                        style="background: linear-gradient(to right, rgba(0, 0, 0, 0.584), rgba(0, 0, 0, 0.032));">
+                    </div>
+                </div>
+                <div class="w-1/5 h-full bg-cover bg-center" style="background-image: url('src/banner3.png');">
+                    <div class="d-flex pl-16 w-full h-full flex flex-col justify-center"
+                        style="background: linear-gradient(to right, rgba(0, 0, 0, 0.584), rgba(0, 0, 0, 0.032));">
+                    </div>
+                </div>
+                <div class="w-1/5 h-full bg-cover bg-center" style="background-image: url('src/banner4.png');">
+                    <div class="d-flex pl-16 w-full h-full flex flex-col justify-center"
+                        style="background: linear-gradient(to right, rgba(0, 0, 0, 0.584), rgba(0, 0, 0, 0.032));">
+                    </div>
+                </div>
+                <div class="w-1/5 h-full bg-cover bg-center" style="background-image: url('src/banner5.png');">
+                    <div class="d-flex pl-16 w-full h-full flex flex-col justify-center"
+                        style="background: linear-gradient(to right, rgba(0, 0, 0, 0.584), rgba(0, 0, 0, 0.032));">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fixed text -->
+            <div class="absolute h-full inset-0 flex flex-col justify-center"
+                style="background: linear-gradient(to right, rgba(0, 0, 0, 0.461), rgba(0, 0, 0, 0.087));">
+                <div class="gap-2 flex flex-col md:pl-10 pl-5">
+                    <div class=" gap-3 w-auto flex items-center ">
+                        <span class="block text-sm md:text-lg font-medium text-white ">Satu Langkah Untuk</span>
+                        <div class="md:w-36 w-24 h-1 bg-white"></div>
+                    </div>
+                    <div class="w-full flex ">
+                        <div class="content flex flex-col items-start ">
+                            <div class="content__container md:h-[75px] h-[50px]">
+                                <ul class="content__container__list w-full" style="color: white;">
+                                    <li class="content__container__list__item font-bold md:text-[50px] text-[33px]">
+                                        Meningkatkan</li>
+                                    <li class="content__container__list__item font-bold md:text-[50px] text-[33px]">
+                                        Mendorong</li>
+                                    <li class="content__container__list__item font-bold md:text-[50px] text-[33px]">
+                                        Menumbuhkan</li>
+                                    <li class="content__container__list__item font-bold md:text-[50px] text-[33px]">
+                                        Memajukan</li>
+                                </ul>
+                            </div>
+                            <p style="color: white;"
+                                class="text-industri font-bold md:text-[50px] text-[33px] align-start items-start">
+                                Industri
+                                Indonesia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- carousel -->
+
+    <!-- search -->
+    <div class=" mt-10 w-full h-56 flex flex-col justify-center align-center items-center">
+        <p class="text-black font-bold md:text-2xl text-md text-center text-[#2A324B]">Jelajahi keunggulan dan potensi
+            luar biasa industri <span style="color: #D39362;">Indonesia</span></p>
+        <p class="text-black font-medium md:text-sm text-[10px] text-center mt-2">Temukan inovasi, kreativitas, dan
+            peluang yang
+            menjadikan Indonesia pusat pertumbuhan ekonomi berkelanjutan</p>
+
+        <form class="md:w-4/5 w-full mt-5">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
+            <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                    <svg class="md:w-4 md:h-4 w-2 h-2 text-gray-500 " aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                    </svg>
+                </div>
+                <input type="search" id="default-search"
+                    class="block w-full p-4 md:ps-10 ps-6 md:text-sm text-[11px] text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:border-slate-700"
+                    placeholder="Cari informasi/berita/artikel....." />
+                <button type="submit"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg md:text-sm text-[10px] px-4 py-2 ">Cari</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- search -->
+
+    <!-- news -->
+    <div class="flex justify-between mt-10 mb-10">
+        <p class="font-bold text-2xl text-[#2A324B]">Berita <span class="text-[#D39362]">Terbaru</span></p>
+        <button type="submit"
+            class="text-white  end-2.5 bottom-2.5 bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg md:text-sm text-[10px] px-4 py-2 ">Lihat
+            Semua</button>
+    </div>
+    <div class="w-full h-auto  grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-3">
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- news -->
+
+    <!-- article -->
+    <div class="flex justify-between mt-20 mb-10">
+        <p class="font-bold text-2xl text-[#2A324B]">Artikel <span class="text-[#D39362]">Populer</span></p>
+        <button type="submit"
+            class="text-white  end-2.5 bottom-2.5 bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg md:text-sm text-[10px] px-4 py-2 ">Lihat
+            Semua</button>
+    </div>
+    <div class="w-full h-auto  grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-3">
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+            <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+            <div class="">
+                <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+
+                <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah,
+                    Menufaktur RI Kena Efek Buruk</h5>
+                <a href="#"
+                    class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                    Lihat Berita
+                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- article -->
+
+    <!-- Lokalind info -->
+    <div
+        class="bg-[#F4F7FF] rounded-[40px] w-full h-full md:h-[70vh] mt-28 flex md:grid-cols-2 grid-cols-1 grid-cols-reverse grid flex flex-col flex md:flex-row align-center items-center justify-center py-10 p-5 md:px-10">
+
+        <div class="md:flex hidden align-center items-center justify-center">
+            <img class="w-64 h-64" src="src/logobig (1).png" alt="">
+        </div>
+        <div class="gap bg-white p-8 rounded-[30px]">
+            <div class="w-full flex  ">
+                <div class="content flex flex-col items-start ">
+                    <div class="content__container md:h-[35px] h-[28px]">
+                        <ul class="content__container__list w-full" style="color: black;">
+                            <li class="content__container__list__item font-semibold md:text-[25px] text-[20px]">
+                                Mengenal</li>
+                            <li class="content__container__list__item font-semibold md:text-[25px] text-[20px]">
+                                Apa itu</li>
+                            <li class="content__container__list__item font-semibold md:text-[25px] text-[20px]">
+                                Lebih dekat dengan</li>
+                            <li class="content__container__list__item font-semibold md:text-[25px] text-[20px]">
+                                Memahami</li>
+                        </ul>
+                    </div>
+                    <p
+                        class="text-industri font-bold md:text-[80px] text-[50px] align-start items-start text-[#2A324B]">
+                        Lokal<span class="text-[#D39362]">ind</span></p>
+                </div>
+            </div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deserunt eaque a at
+                molestias sint rem incidunt repellat, repellendus ad harum, illum molestiae consequatur tenetur.</p>
+            <div class="h-5"></div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deserunt eaque a at
+                molestias sint rem incidunt repellat, repellendus ad harum, illum molestiae consequatur tenetur.</p>
+        </div>
+    </div>
+    <!-- Lokalind info -->
+
+    <!-- Lokalind info -->
+    <div
+        class=" rounded-[40px] w-full h-full md:h-[70vh] md:mt-10 mt-28 flex md:grid-cols-2 grid-cols-1  md:grid flex  flex-col-reverse flex md:flex-row align-center items-center justify-center px-5 md:px-10">
+
+
+        <div class="gap bg-white p-8 rounded-[30px]">
+            <div class="w-full flex  ">
+                <div class="content flex flex-col items-start font-bold mb-2  ">
+
+                    <p
+                        class="text-industri font-bold md:text-[30px] md:leading-10 text-[20px] align-start items-start text-[#2A324B]">
+                        Bergabunglah dengan komunitas <span class="text-[#D39362]">Kami</span></p>
+                </div>
+            </div>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi deserunt eaque a at
+                molestias sint rem incidunt repellat, repellendus ad harum, illum molestiae consequatur tenetur.</p>
+            <button type="submit"
+                class="text-white mt-3  end-2.5 bottom-2.5 bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg md:text-sm text-[10px] px-4 py-2 ">Lihat
+                Komunitas</button>
+        </div>
+        <div class="flex  align-center items-center justify-center">
+            <img class="md:w-[420px] w-[300px] " src="src/community.png" alt="">
+        </div>
+    </div>
+    <!-- Lokalind info -->
+
+    <!-- tujuan dan manfaat info -->
+
+    <div
+        class=" bg-[#F4F7FF] rounded-[40px] w-full mt-16 flex  grid-cols-1 grid-cols-reverse grid flex flex-col flex  align-center items-center  justify-center py-10 px-5 md:px-10">
+        <div
+            class="flex-col flex h-42 items-center align-center justify-center bg-white p-5  w-full md:mb-0 mb-8 rounded-[30px] ">
+            <p
+                class="text-industri w-auto  font-bold md:text-[30px] text-[20px] align-start items-start text-[#2A324B]">
+                Tujuan dan manfaat
+                Lokal<span class="text-[#D39362]">ind</span></p>
+        </div>
+        <div class="gap  md:py-8 p-0 rounded-[30px] ">
+            <div class="w-full flex ">
+                <div
+                    class="content flex flex-col md:flex-row justify-start align-start  items-start md:h-[30vh] h-[90vh]">
+
+                    <div class="border rounded-[20px] border-2 border-slate-200 mt-5 md:mr-3 ">
+                        <button onclick="toggleAccordion(1)"
+                            class="w-full bg-white flex justify-between items-center p-5 text-[#2A324B] rounded-[20px]">
+                            <span class="font-bold">What can I do with Material Tailwind?</span>
+                            <span id="icon-3" class=" transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4">
+                                    <path
+                                        d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div id="content-1" class="h-auto overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500 m-3 font-medium ">
+                                Material Tailwind allows you to quickly build modern, responsive websites with a focus
+                                on design.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border rounded-[20px] border-2 border-slate-200 mt-5 md:mx-3">
+                        <button onclick="toggleAccordion(2)"
+                            class="w-full bg-white flex justify-between items-center p-5 text-[#2A324B] rounded-[20px]">
+                            <span class="font-bold">What can I do with Material Tailwind?</span>
+                            <span id="icon-3" class=" transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4">
+                                    <path
+                                        d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div id="content-2" class="h-auto overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500 m-3 font-medium ">
+                                Material Tailwind allows you to quickly build modern, responsive websites with a focus
+                                on design.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border rounded-[20px] border-2 border-slate-200 mt-5 md:ml-3">
+                        <button onclick="toggleAccordion(3)"
+                            class="w-full bg-white flex justify-between items-center p-5 text-[#2A324B] rounded-[20px]">
+                            <span class="font-bold">What can I do with Material Tailwind?</span>
+                            <span id="icon-3" class=" transition-transform duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                    class="w-4 h-4">
+                                    <path
+                                        d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div id="content-3" class="h-auto overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500 m-3 font-medium ">
+                                Material Tailwind allows you to quickly build modern, responsive websites with a focus
+                                on design.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- tujuan dan manfaat info -->
+
+    
+    <!-- footer -->
+    <div class="mt-28 grid md:grid-cols-4 grid-cols-1 gap-4 p-6 bg-[#2A324B]  rounded-[30px] w-full h-[100vh] md:h-96 flex">
+        <div class="col-span-2  p-4 h-24">
+            <div class="flex w-60 rounded-[20px] justify-center align-center bg-white p-4 items-center">
+                <img class="w-10" src="src/logo (1).png" alt="">
+                <p class="text-3xl pl-2 font-bold text-[#2A324B]">Lokal<span class="text-[#D39362]">ind</span></p>
+            </div>
+            <p class="text-white text-xs mt-5 md:w-80 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione reiciendis incidunt eius quae earum labore asperiores id ad? Quod?</p>
+            <p class="text-white text-xs mt-5 md:w-80 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione reiciendis incidunt eius quae earum labore asperiores id ad? Quod?</p>
+            <div class="flex gap gap-4 mt-12 items-center ">
+                <a href=""><img src="src/sosmed1.png" alt=""></a>
+                <a href=""><img src="src/sosmed2.png" alt=""></a>
+                <a href=""><img src="src/sosmed3.png" alt=""></a>
+                <a href=""><img src="src/sosmed4.png" alt=""></a>
+            </div>
+        </div>
+        <div class="col-span-2 w-full grid grid-cols-2  flex justify-center align-center items-center p-4 flex-col font-semibold text-white h-full">
+            <a href="">Jelajahi</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+        </div>
+    </div>
+    <!-- footer -->
+     <p class="mb-5 w-full flex justify-center align-center items-center text-xs md:text-lg text-align font-medium mt-6">Copyright © 2024 Lokalind. All Rights Reserved.</p>
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const slideImages = document.querySelectorAll('.carousel-slide > div');
+
+        let counter = 0;
+        let direction = 1; // 1 for forward, -1 for backward
+        const size = slideImages[0].clientWidth;
+
+        function changeSlide() {
+            counter += direction;
+            if (counter === slideImages.length - 1) {
+                direction = -1; // Change direction to backward
+            } else if (counter === 0) {
+                direction = 1; // Change direction to forward
+            }
+
+            carouselSlide.style.transform = `translateX(-${counter * size}px)`;
+        }
+
+        setInterval(changeSlide, 3000); // Change slide every 3 seconds
+
+        function toggleAccordion(index) {
+            const content = document.getElementById(`content-${index}`);
+            const icon = document.getElementById(`icon-${index}`);
+
+            // SVG for Minus icon
+            const minusSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M3.75 7.25a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-8.5Z" />
+      </svg>
+    `;
+
+            // SVG for Plus icon
+            const plusSVG = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+      </svg>
+    `;
+
+            // Toggle the content's max-height for smooth opening and closing
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                icon.innerHTML = plusSVG;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerHTML = minusSVG;
+            }
+        }
+    </script>
+</body>
+
+</html>

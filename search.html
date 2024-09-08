@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokalind - Jelajahi</title>
+    <link rel="shortcut icon" href="src/logo (1).png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+
+<body class="md:px-12 px-2 pt-5 md:pt-10" style="font-family: Poppins;">
+    <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white">
+    <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center w-full justify-between h-16">
+        <!-- Logo and Brand Name -->
+        <div class="flex-shrink-0 flex items-center">
+          <img class="h-8 w-8" src="src/logo (1).png" alt="Logo">
+          <span class="ml-2 md:text-3xl text-xl font-bold" style="color: #2A324B;">Lokal<span
+              style="color: #D39362;">ind</span>
+          </span>
+        </div>
+        <div class="flex">
+          <!-- Navigation Links (for larger screens) -->
+          <div class="items-center flex md:space-x-6 space-x-3">
+            <div class="hidden md:flex space-x-4 items-center">
+              <a href="#"
+                class="text-[#1E1E1E] font-semibold hover:text-[#767B91] transition duration-500 ease-in-out">Jelajahi</a>
+              <a href="#"
+                class="text-[#1E1E1E] font-semibold hover:text-[#767B91] transition duration-500 ease-in-out">Komunitas</a>
+            </div>
+            <a href="#" class="">
+              <svg class="md:w-6 w-4 text-[#1E1E1E] hover:text-[#767B91]" xmlns="http://www.w3.org/2000/svg" width="37"
+                height="37" viewBox="0 0 37 37" fill="none">
+                <path
+                  d="M36.1388 33.0362L27.8691 24.7666C29.8602 22.1162 30.9349 18.89 30.9313 15.575C30.9313 7.10762 24.0424 0.21875 15.575 0.21875C7.10762 0.21875 0.21875 7.10762 0.21875 15.575C0.21875 24.0424 7.10762 30.9313 15.575 30.9313C18.89 30.9349 22.1162 29.8602 24.7666 27.8691L33.0362 36.1388C33.4548 36.513 34.0008 36.7127 34.5621 36.697C35.1233 36.6813 35.6573 36.4513 36.0543 36.0543C36.4513 35.6573 36.6813 35.1233 36.697 34.5621C36.7127 34.0008 36.513 33.4548 36.1388 33.0362ZM4.60625 15.575C4.60625 13.4056 5.24956 11.2849 6.45482 9.48109C7.66008 7.67729 9.37317 6.2714 11.3774 5.4412C13.3817 4.611 15.5872 4.39378 17.7149 4.81701C19.8426 5.24024 21.7971 6.28492 23.3311 7.81892C24.8651 9.35293 25.9098 11.3074 26.333 13.4351C26.7562 15.5628 26.539 17.7683 25.7088 19.7726C24.8786 21.7768 23.4727 23.4899 21.6689 24.6952C19.8651 25.9004 17.7444 26.5438 15.575 26.5438C12.667 26.5403 9.87906 25.3835 7.82278 23.3272C5.76649 21.2709 4.60974 18.483 4.60625 15.575Z"
+                  fill="#1E1E1E" />
+              </svg>
+            </a>
+            <!-- Tombol keempat -->
+            <li class="relative flex items-center space-x-1" x-data="{ open: false }" @mouseenter="open = true"
+              @mouseleave="open = false">
+              <a class="flex gap-2 text-[#1E1E1E] font-semibold hover:text-[#767B91] md:border-[2px] border-[1px] border-[#1E1E1E] hover:border-[#767B91] p-2 rounded-lg transition duration-500 ease-in-out"
+                href="#" :aria-expanded="open">
+                <img class="md:w-6 w-4" src="src/language2.png" alt="">
+                <p class="font-bold md:flex hidden">Indonesia</p>
+              </a>
+              <!-- 2nd level menu -->
+              <ul
+                class="z-20  origin-top-right absolute top-full left-1/2 -translate-x-1/2 min-w-[240px] bg-white border border-slate-200 p-2 rounded-lg shadow-xl [&[x-cloak]]:hidden"
+                x-show="open" x-transition:enter="transition ease-out duration-200 transform"
+                x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-out duration-200" x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0" x-cloak
+                @focusout="await $nextTick();!$el.contains($focus.focused()) && (open = false)">
+                <li>
+                  <a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+                    <div class="flex items-center justify-center bg-white  shadow-sm h-7 w-7 shrink-0 mr-3">
+                      <img src="src/language1.png" alt="">
+                    </div>
+                    <span class="whitespace-nowrap">English</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="text-slate-800 hover:bg-slate-50 flex items-center p-2" href="#">
+                    <div class="flex items-center justify-center bg-white  shadow-sm h-7 w-7 shrink-0 mr-3">
+                      <img src="src/language2.png" alt="">
+                    </div>
+                    <span class="whitespace-nowrap">Indonesia</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <a href="#" class="text-gray-300 hover:text-white">
+              <img class="md:w-10 w-6" src="src/profile (1).png" alt="">
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="mr-2 flex md:hidden">
+            <button id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-[#1E1E1E] font-semibold hover:text-[#767B91]">
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-50">
+        <a href="#" class="block text-[#1E1E1E] font-semibold hover:text-[#767B91]">Jelajahi</a>
+        <a href="#" class="block text-[#1E1E1E] font-semibold hover:text-[#767B91]">Komunitas</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+      <!-- search -->
+      <div class=" mt-10 w-full h-56 flex flex-col justify-center align-center items-center">
+        <p class="text-black font-bold md:text-2xl text-md text-center text-[#2A324B]">Jelajahi keunggulan dan potensi
+          luar biasa industri <span style="color: #D39362;">Indonesia</span></p>
+        <p class="text-black font-medium md:text-sm text-[10px] text-center mt-2">Temukan inovasi, kreativitas, dan
+          peluang yang
+          menjadikan Indonesia pusat pertumbuhan ekonomi berkelanjutan</p>
+  
+        <form class="md:w-4/5 w-full mt-5">
+          <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="md:w-4 md:h-4 w-2 h-2 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+              </svg>
+            </div>
+            <input type="search" id="default-search"
+              class="block w-full p-4 md:ps-10 ps-6 md:text-sm text-[11px] text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:border-slate-700"
+              placeholder="Cari informasi/berita/artikel....." />
+            <button type="submit"
+              class="text-white absolute end-2.5 bottom-2.5 bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 font-medium rounded-lg md:text-sm text-[10px] px-4 py-2 ">Cari</button>
+          </div>
+        </form>
+  
+      </div>
+      <!-- search -->
+
+      <!-- news1  -->
+      <div class="w-full h-auto  grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-3 pt-[100px]">
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+          <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+          <div class="">
+            <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+  
+            <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+            <a href="#"
+              class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+              Lihat Berita
+              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+          <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+          <div class="">
+            <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+  
+            <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+            <a href="#"
+              class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+              Lihat Berita
+              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+          <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+          <div class="">
+            <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+  
+            <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+            <a href="#"
+              class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+              Lihat Berita
+              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+          <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+          <div class="">
+            <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+  
+            <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+            <a href="#"
+              class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+              Lihat Berita
+              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- news1  -->
+
+    <!-- news1  -->
+     <div class="w-full h-auto  grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-3 md:pt-[80px] sm:pt-[12px]">
+                <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+                  <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+                  <div class="">
+                    <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+          
+                    <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                      Lihat Berita
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+                  <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+                  <div class="">
+                    <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+          
+                    <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                      Lihat Berita
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+                  <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+                  <div class="">
+                    <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+          
+                    <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                      Lihat Berita
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="w-full h-auto bg-white border border-gray-200 rounded-lg shadow md:p-3 p-2 ">
+                  <img class="rounded-t-lg mb-5" src="src/news1.png" alt="" />
+                  <div class="">
+                    <p class="mb-1 md:text-xs text-[10px] text-gray-700 ">1 Jam yang lalu ...</p>
+          
+                    <h5 class="mb-2 md:text-sm text-[10px]  font-bold text-gray-900">Orang RI Beli Barang Impor Murah, Menufaktur RI Kena Efek Buruk</h5>
+                    <a href="#"
+                      class="inline-flex items-center px-3 py-2 mt-4 md:text-xs text-[8px] font-medium text-center text-white bg-[#2A324B] hover:bg-[#767B91] transition duration-500 ease-in-out focus:ring-4 focus:outline-none focus:ring-blue-100 rounded-lg">
+                      Lihat Berita
+                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M1 5h12m0 0L9 1m4 4L9 9" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+     </div>
+     <!-- news1  -->
+
+     <!-- footer -->
+    <div class="mt-28 grid md:grid-cols-4 grid-cols-1 gap-4 p-6 bg-[#2A324B]  rounded-[30px] w-full h-[100vh] md:h-96 flex">
+        <div class="col-span-2  p-4 h-24">
+            <div class="flex w-60 rounded-[20px] justify-center align-center bg-white p-4 items-center">
+                <img class="w-10" src="src/logo (1).png" alt="">
+                <p class="text-3xl pl-2 font-bold text-[#2A324B]">Lokal<span class="text-[#D39362]">ind</span></p>
+            </div>
+            <p class="text-white text-xs mt-5 md:w-80 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione reiciendis incidunt eius quae earum labore asperiores id ad? Quod?</p>
+            <p class="text-white text-xs mt-5 md:w-80 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ratione reiciendis incidunt eius quae earum labore asperiores id ad? Quod?</p>
+            <div class="flex gap gap-4 mt-12 items-center ">
+                <a href=""><img src="src/sosmed1.png" alt=""></a>
+                <a href=""><img src="src/sosmed2.png" alt=""></a>
+                <a href=""><img src="src/sosmed3.png" alt=""></a>
+                <a href=""><img src="src/sosmed4.png" alt=""></a>
+            </div>
+        </div>
+        <div class="col-span-2 w-full grid grid-cols-2  flex justify-center align-center items-center p-4 flex-col font-semibold text-white h-full">
+            <a href="">Jelajahi</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+            <a href="">Komunitas</a>
+        </div>
+    </div>
+    <!-- footer -->
+     <p class="mb-5 w-full flex justify-center align-center items-center text-xs md:text-lg text-align font-medium mt-6">Copyright ©️ 2024 Lokalind. All Rights Reserved.</p>
+
+</body>
+</html>
